@@ -26,7 +26,7 @@ end
 def print(students)
   if !students.empty?
     students.each.with_index(1) { |student, index|
-    puts "#{index}. #{student[:name]} (#{student[:cohort]} cohort)" }
+    puts "#{index}. #{student[:name].center(20, "--")} (#{student[:cohort]} cohort)" }
   else
   end
 end
