@@ -24,10 +24,13 @@ def print_header
 end
 
 def print(students)
+  student_checker = true
+  while student_checker do
+
   students.each.with_index(1) do |student, index|
-    if student[:name].length < 12
     puts "#{index}. #{student[:name]} (#{student[:cohort]} cohort)"
   end
+  student_checker = false
   end
 end
 
