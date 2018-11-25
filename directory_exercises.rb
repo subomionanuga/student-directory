@@ -13,8 +13,12 @@ def input_students
     if cohort == ""
       cohort = "november"
     end
+    puts "What is your age?"
+    age = gets.chomp
+    puts "Who is your sidekick?"
+    sidekick = gets.chomp
     # add the student hash to the array
-    students << {name: name, cohort: cohort}
+    students << {name: name, cohort: cohort, age: age, sidekick: sidekick}
     puts "Now we have #{students.count} students"
     # get another name from the user
     name = gets.chomp
@@ -31,7 +35,7 @@ end
 def print(students)
   if !students.empty?
     students.each.with_index(1) { |student, index|
-    puts "#{index}. #{student[:name].center(20, "--")} (#{student[:cohort]} cohort)" }
+    puts "#{index}. #{student[:name].center(20, "--")} (#{student[:cohort]} cohort), #{student[:age]}, #{student[:sidekick]}" }
   else
   end
 end
